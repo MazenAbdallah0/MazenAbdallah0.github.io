@@ -1,0 +1,35 @@
+/* ==========================================================================
+   rtl.css — Arabic / right-to-left refinements.
+   The layout is built on CSS logical properties and grid, so it mirrors by itself;
+   only direction-sensitive details (arrows, gradients, tilt) are handled here.
+   ========================================================================== */
+
+/* Directional arrows point the reading direction */
+html[dir="rtl"] .ico-arrow { transform: scaleX(-1); }
+html[dir="rtl"] .btn:hover .ico-arrow { transform: scaleX(-1) translateX(4px); }
+html[dir="rtl"] .big-link > .ico-arrow { transform: scaleX(-1) rotate(-45deg); }
+html[dir="rtl"] .big-link:hover > .ico-arrow { transform: scaleX(-1) rotate(0); }
+
+/* Latin tokens (email, phone, URLs) stay left-to-right inside RTL text */
+.ltr { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .big-text strong.ltr,
+html[dir="rtl"] .facts a.ltr,
+html[dir="rtl"] .contact-meta a.ltr { display: block; text-align: right; }
+html[dir="rtl"] input[type="email"] { direction: ltr; text-align: right; }
+html[dir="rtl"] input[type="email"]::placeholder { direction: rtl; }
+
+/* Gradients and tilt mirror */
+html[dir="rtl"] .grad,
+html[dir="rtl"] .hero-title .l2 { background-image: linear-gradient(245deg, #5b8dff 0%, #22d3ee 90%); }
+html[dir="rtl"] .hero-role::before { background: linear-gradient(270deg, #2563ff, #22d3ee); }
+html[dir="rtl"] .nav-ind { left: 0; right: auto; }
+html[dir="rtl"] .scroll-cue .mouse::after { left: auto; right: 50%; margin: 0 -1.5px 0 0; }
+
+/* Scroll cue + typed line sit naturally at the reading start */
+html[dir="rtl"] .typed-line { direction: rtl; }
+
+/* Arabic reads better slightly larger in body copy and chips */
+html[lang="ar"] p, html[lang="ar"] li { font-size: 1.02em; }
+html[lang="ar"] .chip, html[lang="ar"] .filter { font-size: 0.92rem; }
+html[lang="ar"] .nav-links a { font-size: 0.98rem; }
+html[lang="ar"] .stat-label { font-size: 1rem; }

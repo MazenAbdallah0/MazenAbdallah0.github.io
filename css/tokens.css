@@ -1,0 +1,56 @@
+/* ==========================================================================
+   tokens.css — design tokens for the "Dark Cinematic" system
+   Deep black base, charcoal surfaces, electric-blue + cyan accents.
+   ========================================================================== */
+:root {
+  /* Surfaces */
+  --bg: #03050a;
+  --bg-1: #070a10;
+  --char: #0b0f17;
+  --char-2: #101622;
+  --char-3: #171e2d;
+
+  /* Lines */
+  --line: rgba(140, 170, 255, 0.1);
+  --line-2: rgba(140, 170, 255, 0.18);
+  --line-3: rgba(140, 170, 255, 0.32);
+
+  /* Text */
+  --text: #f1f5fc;
+  --text-2: #aab6cb;
+  --text-3: #6e7a92;
+
+  /* Accents */
+  --blue: #2563ff;
+  --blue-2: #4f8bff;
+  --cyan: #22d3ee;
+  --cyan-2: #67e8f9;
+  --grad: linear-gradient(115deg, #2563ff 0%, #22d3ee 100%);
+  --grad-text: linear-gradient(115deg, #5b8dff 0%, #22d3ee 90%);
+  --grad-soft: linear-gradient(115deg, rgba(37, 99, 255, 0.2), rgba(34, 211, 238, 0.12));
+
+  /* Glass */
+  --glass: rgba(13, 19, 31, 0.58);
+  --glass-2: rgba(18, 26, 42, 0.46);
+  --blur: blur(18px) saturate(150%);
+
+  /* Shape */
+  --r-sm: 12px;
+  --r: 20px;
+  --r-lg: 32px;
+
+  /* Layout */
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --nav-h: 76px;
+
+  /* Type */
+  --f-display: "Sora", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --f-ar: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, "Noto Sans Arabic", Arial, sans-serif;
+  --f-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow: 0 40px 100px -40px rgba(0, 0, 0, 0.9);
+}
